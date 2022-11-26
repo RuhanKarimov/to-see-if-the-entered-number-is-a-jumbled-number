@@ -2,8 +2,8 @@
 
 int main()
 {
-	int x,y,c,b,L=0,K=0;
-	long number,number1,number2;
+	int x,y,c,b,L=0;
+	long number,number1;
 	printf("Enter a number:");
 	scanf("%d",&number);
 	
@@ -18,7 +18,7 @@ int main()
 		}
 		else
 		{
-			number1=0; break;
+			break;
 		}
 		
 		y=number1%10;
@@ -28,37 +28,11 @@ int main()
 		
 		if(c!=1 && c!=0 && b!=1 && b!=0)
 		{
-			L=1;
-			break;
+			L=1;	break;
 		}
 	}
 	
-	number2=number;
-	while(number2!=0)
-	{
-		x=number2%10;
-		
-		y=number2%10;
-		
-		c=x-y;
-		b=y-x;
-		
-		if(c!=1 && c!=0 && b!=1 && b!=0)
-		{
-			K=1;
-			break;
-		}
-		if(number2>10)
-		{
-			number2=number2/10;
-		}
-		else
-		{
-			number2=0; break;
-		}
-	}
-	
-	if(K==0 && L==0)
+	if(L==0)
 	{
 		printf("The entered number is a jumbled number");
 	}
